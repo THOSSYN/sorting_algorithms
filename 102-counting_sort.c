@@ -40,7 +40,7 @@ void counting_sort(int *array, size_t size)
 		free(element_count);
 		return;
 	}
-	for (i = size - 1; i > 0; i--)
+	for (i = size - 1; i != (size_t)-1; i--)
 	{
 		resolved_array[--element_count[array[i]]] = array[i];
 	}
