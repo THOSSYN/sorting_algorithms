@@ -32,6 +32,7 @@ void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
+void Heapup(int *array, size_t size, size_t non_leaf);
 void radix_sort(int *array, size_t size);
 void Radixcount_sort(int *array, size_t size, int pos);
 void bitonic_sort(int *array, size_t size);
