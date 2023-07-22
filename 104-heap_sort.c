@@ -33,6 +33,8 @@ void heap_sort(int *array, size_t size)
  * Heapup - heapify the node that's built from the get_build_nonleaf
  * @array: is the list of element
  * @size: is the size of the list of element
+ * @non_leaf: is the node index gotten as a result of dividing binary
+ * search heap tree into half
  * Return: nothing
  */
 
@@ -54,7 +56,7 @@ void Heapup(int *array, size_t size, size_t non_leaf)
 	}
 }
 /**
- * swap: exchange two values
+ * swap - exchange two values
  * @value1: is the value to exchange
  * @value2: is the value to excange with
  * Return: nothing
