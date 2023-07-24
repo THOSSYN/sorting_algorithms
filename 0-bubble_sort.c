@@ -26,10 +26,12 @@ void swap(int *value1, int *value2)
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;
+	int swapped;
 
 	i = size - 1;
 	while (i > 0)
 	{
+		swapped = 0;
 		j = 0;
 		while (j < i)
 		{
@@ -37,9 +39,12 @@ void bubble_sort(int *array, size_t size)
 			{
 				swap(&array[j], &array[j + 1]);
 				print_array(array, size);
+				swapped++;
 			}
 			j++;
 		}
 		i--;
+		if (!swapped)
+			break;
 	}
 }
