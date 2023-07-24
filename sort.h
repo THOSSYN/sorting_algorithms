@@ -31,6 +31,7 @@ void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
+void merger(int *array, int *l_arr, int *r_arr, size_t lsize, size_t rsize);
 void heap_sort(int *array, size_t size);
 void Heapup(int *array, size_t size, size_t non_leaf);
 void radix_sort(int *array, size_t size);

@@ -1,0 +1,3 @@
+best case: 
+average case: O(nlogn)
+worst case: O(nlogn)
