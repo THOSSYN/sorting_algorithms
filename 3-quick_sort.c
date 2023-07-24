@@ -10,16 +10,17 @@
 
 void swap(int *value1, int *value2)
 {
-        int tmp;
+	int tmp;
 
-        tmp = *value1;
-        *value1 = *value2;
-        *value2 = tmp;
+	tmp = *value1;
+	*value1 = *value2;
+	*value2 = tmp;
 }
 /**
  * pivot_function - create a pivot index for quicksort
- * @arr: is the array
+ * @array: is the array
  * @size: is the size of the array
+ * @low: is the starting index
  * Return: the index of the pivot
  */
 size_t pivot_function(int *array, size_t low, size_t size)
@@ -41,9 +42,10 @@ size_t pivot_function(int *array, size_t low, size_t size)
 }
 
 /**
- * quick_sort - calls the re_quick_sort function
+ * quick_sort - sorts an array in ascending order
  * @array: is the list of elements
  * @size: is the size of the array
+ * Return: nothing
  */
 void quick_sort(int *array, size_t size)
 {
