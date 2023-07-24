@@ -28,23 +28,27 @@ void bubble_sort(int *array, size_t size)
 	size_t i, j;
 	int swapped;
 
-	i = size - 1;
-	while (i > 0)
+
+	if (array != NULL || size > 1)
 	{
-		swapped = 0;
-		j = 0;
-		while (j < i)
+		i = size - 1;
+		while (i > 0)
 		{
-			if (array[j] > array[j + 1])
+			swapped = 0;
+			j = 0;
+			while (j < i)
 			{
-				swap(&array[j], &array[j + 1]);
-				print_array(array, size);
-				swapped++;
+				if (array[j] > array[j + 1])
+				{
+					swap(&array[j], &array[j + 1]);
+					print_array(array, size);
+					swapped++;
+				}
+				j++;
 			}
-			j++;
+			i--;
+			if (!swapped)
+				break;
 		}
-		i--;
-		if (!swapped)
-			break;
 	}
 }
