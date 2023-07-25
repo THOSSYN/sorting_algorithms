@@ -10,15 +10,16 @@
 
 void swap(int *value1, int *value2)
 {
-        int tmp;
+	int tmp;
 
-        tmp = *value1;
-        *value1 = *value2;
-        *value2 = tmp;
+	tmp = *value1;
+	*value1 = *value2;
+	*value2 = tmp;
 }
 /**
  * pivot_function - create a pivot index for quicksort
- * @arr: is the array
+ * @array: is the list of element
+ * @low: is the starting index
  * @size: is the size of the array
  * Return: the index of the pivot
  */
