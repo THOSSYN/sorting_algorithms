@@ -5,8 +5,7 @@
  * @value1: is the value to exchange
  * @value2: is the value to exchange with
  * Return: Nothing
- *
-
+ */
 void swap(int *value1, int *value2)
 {
 	int tmp;
@@ -14,7 +13,7 @@ void swap(int *value1, int *value2)
 	tmp = *value1;
 	*value1 = *value2;
 	*value2 = tmp;
-}*/
+}
 
 /**
  * bubble_sort - sorts an array in ascending order
