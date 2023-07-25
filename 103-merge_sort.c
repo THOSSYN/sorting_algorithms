@@ -11,25 +11,28 @@
 
 void merge_sort(int *array, size_t size)
 {
-	int left_half[20];
-	int right_half[20];
-	size_t mid = size / 2;
-	size_t lsize = mid;
-	size_t rsize = size - mid;
-	size_t i;
+	if (array != NULL || size > 1)
+	{
+		int left_half[20];
+		int right_half[20];
+		size_t mid = size / 2;
+		size_t lsize = mid;
+		size_t rsize = size - mid;
+		size_t i;
 
-	if (size < 2)
-		return;
+		if (size < 2)
+			return;
 
-	for (i = 0; i < lsize; i++)
-		left_half[i] = array[i];
+		for (i = 0; i < lsize; i++)
+			left_half[i] = array[i];
 
-	for (i = mid; i < size; i++)
-		right_half[i - mid] = array[i];
+		for (i = mid; i < size; i++)
+			right_half[i - mid] = array[i];
 
-	merge_sort(left_half, mid);
-	merge_sort(right_half, size -  mid);
-	merger(array, left_half, right_half, lsize, rsize);
+		merge_sort(left_half, mid);
+		merge_sort(right_half, size -  mid);
+		merger(array, left_half, right_half, lsize, rsize);
+	}
 }
 /**
  * merger - merges element(s) currently found at the recursive tree
